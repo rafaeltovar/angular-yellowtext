@@ -24,8 +24,8 @@
 </head>
 
 <body>
-    <div ng-app="MyDemoApp" ng-controller="myDemo">
-        <textarea ng-yellowtext="options" ng-model="myDemo.text"></textarea>
+    <div ng-app="MyDemoApp" ng-controller="myDemo as my">
+        <textarea ng-yellowtext="['bold', 'underline', 'italic', 'strikethrough', 'align-left', 'align-center', 'align-right', 'unordered-list', 'ordered-list']" ng-model="my.text"></textarea>
     </div>
   <script src="js/app.js"></script>
 </body>
