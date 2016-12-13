@@ -4,8 +4,6 @@ angular.module("Angular-YellowText", [])
         restrict: 'A',
         require: 'ngModel',
         link: function(scope, element, attrs, ngModel) {
-            console.debug(attrs, ngModel);
-
             var ytClass = 'js-yellowtext-' + Math.random().toString(36).substring(7);
             // http://stackoverflow.com/questions/14687822/how-to-pass-a-json-as-a-string-param-to-a-directive
             var buttons = eval('(' + attrs.ngYellowtext + ')');
@@ -14,7 +12,6 @@ angular.module("Angular-YellowText", [])
                             iFrameClass: ytClass,
                             isContentChanged: function(changed){
                                 var value = getContentFromEditor();
-                                console.debug("passa", value);
                                 updateModel.call(this, value);
                             }
                             };
