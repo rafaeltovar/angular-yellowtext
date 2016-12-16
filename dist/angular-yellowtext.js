@@ -22,7 +22,7 @@ angular.module("Angular-YellowText", [])
             }
 
             setContentToEditor = function(content) {
-                editor.contents().find("body").append( content );
+                editor.contents().find("body").html( content );
             }
 
             // Expose scope var with loaded state of Redactor
